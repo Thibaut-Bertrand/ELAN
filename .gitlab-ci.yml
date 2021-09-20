@@ -1,0 +1,21 @@
+stages:
+        - build
+        - test
+build:
+        stage: build
+        script:
+            - echo "building"
+            - qmake
+            - make
+            - mkdir build
+            - mv ELAN_v2 build
+        artifacts: 
+            paths:
+                - build/ELAN_v2
+test:
+        stage: test
+        dependencies: 
+            - build
+        script:
+            - echo "testing"
+            - test -f build/ELAN_v2

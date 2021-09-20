@@ -1,0 +1,7 @@
+default 100
+unknown 100
+µV 100
+uV 100
+microV 100
+fT 5000
+V 100000
